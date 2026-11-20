@@ -1,9 +1,11 @@
 # Testsy
 
-Check releases, investigate failed runs and preserve regression coverage.
+Testsy runs QA tests written in plain English on websites and on iOS and Android apps, and returns a verdict for every check with its evidence: a replay, video, the values it saw, console and network.
 
-Documentation: https://testsy.dev/docs/mcp/
+Documentation: https://testsy.dev/docs/mcp/ · Sign up: https://app.testsy.dev
 
-Import or submit this native Cursor plugin using your supported Plugins workflow. Configure TESTSY_AI_API_KEY in Plugins → Configure. The manifest declares the variable; mcp.json references it. Before marketplace approval you can copy the skill folders into .cursor/skills/ and merge the MCP entry into your existing client configuration using its supported secret mechanism.
+This Cursor plugin adds the Testsy MCP server and three skills: check a release, investigate a failed run, and turn a fixed bug into a saved regression test.
 
-This is an integration package prepared for local testing. A directory listing or live-client validation is not implied. Keep API keys out of prompts and version control. Runs use the workspace allowance and perform the test's actions. MIT applies to these integration files only.
+Install it from the Cursor plugin directory, or add this repository as a plugin. Then set TESTSY_AI_API_KEY (a workspace API key from https://app.testsy.dev) under Plugins → Configure. To use it without the plugin, copy the skill folders into .cursor/skills/ and add the MCP entry from mcp.json to your Cursor MCP settings.
+
+Keep API keys in your secret store, out of prompts and version control. A run uses the workspace allowance and performs real actions on the site or app it is pointed at, so use it on apps and accounts you are allowed to test. These integration files are MIT licensed.
